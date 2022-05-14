@@ -757,30 +757,30 @@ const hugeArray = [
   9973, 9974, 9975, 9976, 9977, 9978, 9979, 9980, 9981, 9982, 9983, 9984, 9985,
   9986, 9987, 9988, 9989, 9990, 9991, 9992, 9993, 9994, 9995, 9996, 9997, 9998,
   9999, 10000,
-];
+]
 
-const normalArray = [1, 2, 3, 5, 6, 7, 8, 9];
-let missing = new Array();
+const normalArray = [1, 2, 3, 5, 6, 7, 8, 9]
+let missing = new Array()
 
 // find the missing number
 
 const findMissingValue = async (array: Array<number>): Promise<void> => {
-  const values = array.filter((el) => el !== el - 1).sort();
+  const values = array.filter((el) => el !== el - 1).sort()
 
   for (let i = values[0]; i < values.length; i++) {
     if (array.indexOf(i) == -1) {
-      missing.push(i);
+      missing.push(i)
     }
   }
-  console.log(missing);
-};
+  console.log(missing)
+}
 
 const checkPerformance = async () => {
-  const start = performance.now();
-  await findMissingValue(hugeArray);
-  const end = performance.now();
-  const time = end - start;
-  console.log(time);
-};
+  const start = performance.now()
+  await findMissingValue(hugeArray)
+  const end = performance.now()
+  const time = end - start
+  console.log(time)
+}
 
-checkPerformance();
+checkPerformance()
