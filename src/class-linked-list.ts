@@ -20,6 +20,7 @@ class LinkedList<T> {
 
   prepend(data: T): void {
     const node = new ListNode(data)
+
     if (!this.head) {
       this.head = new ListNode(data)
     } else {
@@ -52,6 +53,7 @@ class LinkedList<T> {
       this.tail.next = node
       this.tail = node
     }
+
     this.length++
     return this
   }
