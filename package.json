@@ -4,7 +4,8 @@
   "description": "",
   "scripts": {
     "build": "npm run prettier && tsc",
-    "prettier": "npx prettier --write ./src"
+    "prettier": "npx prettier --write ./src",
+    "rimraf": "rm -rf bin && mkdir bin"
   },
   "prettier":{
     "semi": false,
