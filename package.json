@@ -5,7 +5,7 @@
   "scripts": {
     "build": "npm run prettier && tsc",
     "prettier": "npx prettier --write ./src",
-    "rimraf": "rm -rf bin && mkdir bin"
+    "rimraf": "rm -rf bin && rm -f tsconfig.tsbuildinfo && mkdir bin"
   },
   "prettier":{
     "semi": false,
